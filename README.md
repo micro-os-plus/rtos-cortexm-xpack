@@ -1,2 +1,4 @@
 # rtos-cortexm-xpack
-A source xPack with the µOS++ Cortex-M port
+
+This project does not use the `master` branch, please
+switch to the `xpack` branch to get the project files.
