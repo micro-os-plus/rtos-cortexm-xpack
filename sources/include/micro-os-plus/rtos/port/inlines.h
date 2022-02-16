@@ -372,7 +372,6 @@ namespace micro_os_plus
         inline __attribute__ ((always_inline)) void
         prepare_suspend (void)
         {
-          ;
         }
 
       } // namespace this_thread
@@ -382,7 +381,6 @@ namespace micro_os_plus
       inline __attribute__ ((always_inline)) void
       clock_highres::start (void)
       {
-        ;
       }
 
       inline __attribute__ ((always_inline)) uint32_t
