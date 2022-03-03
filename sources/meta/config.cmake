@@ -1,6 +1,7 @@
+# -----------------------------------------------------------------------------
 #
 # This file is part of the µOS++ distribution.
-#   (https://github.com/micro-os-plus)
+#   (https://github.com/micro-os-plus/)
 # Copyright (c) 2021 Liviu Ionescu
 #
 # This Source Code Form is subject to the terms of the MIT License.
