@@ -106,7 +106,7 @@ namespace micro_os_plus
         wait_for_interrupt (void)
         {
 #if !defined(MICRO_OS_PLUS_EXCLUDE_RTOS_IDLE_SLEEP)
-#if defined(MICRO_OS_PLUS_TRACE_RTMICRO_OS_PLUS_THREAD_CONTEXT)
+#if defined(MICRO_OS_PLUS_TRACE_RTOS_THREAD_CONTEXT)
           trace::printf ("%s() \n", __func__);
 #endif
           // The DSB is recommended by ARM before WFI.

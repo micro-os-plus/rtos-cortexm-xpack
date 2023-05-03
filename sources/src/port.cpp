@@ -256,7 +256,7 @@ namespace micro_os_plus
       void
       context::create (void* context, void* function, void* arguments)
       {
-#if defined(MICRO_OS_PLUS_TRACE_RTMICRO_OS_PLUS_THREAD_CONTEXT)
+#if defined(MICRO_OS_PLUS_TRACE_RTOS_THREAD_CONTEXT)
         trace::printf ("port::context::%s(%p)\n", __func__, context);
 #endif
         rtos::thread::context* th_ctx
@@ -582,14 +582,14 @@ namespace micro_os_plus
               || (rtos::interrupts::in_handler_mode ()
                   && !rtos::scheduler::preemptive ()))
             {
-#if defined(MICRO_OS_PLUS_TRACE_RTMICRO_OS_PLUS_THREAD_CONTEXT)
+#if defined(MICRO_OS_PLUS_TRACE_RTOS_THREAD_CONTEXT)
               trace::printf ("port::scheduler::%s() %s nop\n", __func__,
                              rtos::scheduler::current_thread_->name ());
 #endif
               return;
             }
 
-#if defined(MICRO_OS_PLUS_TRACE_RTMICRO_OS_PLUS_THREAD_CONTEXT)
+#if defined(MICRO_OS_PLUS_TRACE_RTOS_THREAD_CONTEXT)
           trace::printf ("port::scheduler::%s()\n", __func__);
 #endif
 
@@ -854,14 +854,14 @@ namespace micro_os_plus
           // Save the current SP in the initial context.
           old_thread->context_.port_.stack_ptr = sp;
 
-#if defined(MICRO_OS_PLUS_TRACE_RTMICRO_OS_PLUS_THREAD_CONTEXT)
+#if defined(MICRO_OS_PLUS_TRACE_RTOS_THREAD_CONTEXT)
           trace::printf ("port::scheduler::%s() leave %s\n", __func__,
                          old_thread->name ());
 #endif
 
           rtos::scheduler::internal_switch_threads ();
 
-#if defined(MICRO_OS_PLUS_TRACE_RTMICRO_OS_PLUS_THREAD_CONTEXT)
+#if defined(MICRO_OS_PLUS_TRACE_RTOS_THREAD_CONTEXT)
           trace::printf ("port::scheduler::%s() to %s\n", __func__,
                          rtos::scheduler::current_thread_->name ());
 #endif
