@@ -1,7 +1,7 @@
 {
   "name": "@micro-os-plus/rtos-cortexm",
   "version": "0.1.0",
-  "description": "A source library xPack with the µOS++ Cortex-M port",
+  "description": "A source code library with the µOS++ Cortex-M port",
   "main": "",
   "scripts": {
     "npm-install": "npm install",
